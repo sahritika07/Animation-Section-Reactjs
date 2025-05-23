@@ -63,21 +63,21 @@ export default function TeamCard() {
         <div className="w-full bg-[#1E293B]/30 py-6">
           <Marquee gradient={false} speed={40} pauseOnHover className="gap-6">
             {teamData.concat(teamData).map((member, index) => (
-          <div
-  key={index}
-  onClick={() => setSelectedMember(member)}
-  className="relative min-w-[300px] h-[200px] bg-[#1E293B] rounded-xl border border-primary/30 overflow-hidden cursor-pointer mx-3 group flex flex-col items-center justify-center transition-all duration-300"
->
-  {/* Sliding Transparent Overlay */}
-  <div className="absolute inset-0 bg-[#A78BFA]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-10 rounded-xl"></div>
+              <div
+                key={index}
+                onClick={() => setSelectedMember(member)}
+                className="relative min-w-[300px] h-[200px] bg-[#1E293B] rounded-xl border border-primary/30 overflow-hidden cursor-pointer mx-3 group flex flex-col items-center justify-center transition-all duration-300"
+              >
+                {/* Sliding Transparent Overlay */}
+                <div className="absolute inset-0 bg-[#A78BFA]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-10 rounded-xl"></div>
 
-  {/* Glowy Border on Hover (Top + Bottom + Left + Right) */}
-  <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-[#A78BFA] group-hover:shadow-[0_0_20px_5px_#A78BFA,inset_0_0_10px_#A78BFA] pointer-events-none transition-all duration-300 z-20" />
+                {/* Glowy Border on Hover (Top + Bottom + Left + Right) */}
+                <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-[#A78BFA] group-hover:shadow-[0_0_20px_5px_#A78BFA,inset_0_0_10px_#A78BFA] pointer-events-none transition-all duration-300 z-20" />
 
-  {/* Content */}
-  <div className="z-30 text-primary mb-2">{member.icon}</div>
-  <h2 className="z-30 text-xl font-semibold">{member.title}</h2>
-</div>
+                {/* Content */}
+                <div className="z-30 text-primary mb-2">{member.icon}</div>
+                <h2 className="z-30 text-xl font-semibold">{member.title}</h2>
+              </div>
 
             ))}
           </Marquee>
